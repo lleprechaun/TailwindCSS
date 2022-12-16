@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счета</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-[#F5F5F5] mx-36">
+    <header class="mt-10 flex flex-row justify-between items-end">
+        <p class="text-3xl font-bold">Все счета</p>
+        <input class="text-lg text-white bg-[#7840B0] px-3 py-1.5 rounded" type="button" value="Выставить счет">
+    </header>
+    <main class="text-sm">
+        <div class="bg-white mt-7">
+            <div class="flex flex-row justify-start border-b">
+                <p class="mx-5 py-3">Выставленные</p>
+                <p class="mx-5 py-3">К оплате</p>
+                <p class="mx-5 py-3 border-b-2 border-b-[#7840B0]">История</p>
+            </div>
+            <div class="flex flex-row justify-between items-center mx-3.5 mt-4">
+                <select class="w-[25%] border rounded px-3 py-3">
+                    <option value="0">Все торговые точки и операции</option>
+                    <option value="1">точка/операция №1</option>
+                    <option value="2">точка/операция №2</option>
+                    <option value="3">точка/операция №3</option>
+                </select>
+
+                <input class="w-[40%] border rounded px-3 py-3" type="text" placeholder="Поиск по номеру счета">
+
+                <select class="w-[15%] border rounded px-3 py-3 bg-[#E8E8E8]">
+                    <option value="0">Фильтры</option>
+                    <option value="1">фильтр №1</option>
+                    <option value="2">фильтр №2</option>
+                    <option value="3">фильтр №3</option>
+                </select>
+
+                <select class="w-[15%] border rounded px-3 py-3 bg-[#E8E8E8]" disabled>
+                    <option value="0">Действия</option>
+                    <option value="1">действие №1</option>
+                    <option value="2">действие №2</option>
+                    <option value="3">действие №3</option>
+                </select>
+            </div>
+            <div class="mx-3.5 mt-5">
+                <table class="border-collapse w-full">
+                    <thead>
+                        <tr class="border-b text-xs text-left">
+                            <th class="py-3"><input type="checkbox"></th>
+                            <th class="py-3">Номер счета</th>
+                            <th class="py-3 flex flex-row justify-start items-center">
+                                Время и дата
+                                <button>
+                                    <img class="h-1 ml-2.5" src="./img/vector1.png" alt="arrow">
+                                </button>
+                            </th>
+                            <th class="py-3">Торговая точка / Оперция</th>
+                            <th class="py-3 flex flex-row justify-start items-center">
+                                Сумма
+                                <button>
+                                    <img class="h-1 ml-2.5" src="./img/vector1.png" alt="arrow">
+                                </button>
+                            </th>
+                            <th class="py-3">Получено</th>
+                            <th class="py-3 flex flex-row justify-start items-center">
+                                Статус
+                                <button>
+                                    <img class="h-1 ml-2.5" src="./img/vector1.png" alt="arrow">
+                                </button>
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">№32467</td>
+                            <td class="py-4">11:20 05.01.2019</td>
+                            <td class="py-4">Smart Лазурный</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">1 500 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50">-150 тг</p>
+                            </td>
+                            <td class="py-4">1 350 тг</td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#5BC044] bg-[#D7EBD3]" type="button" value="Оплачено">
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">№32466</td>
+                            <td class="py-4">21:18 02.01.2019</td>
+                            <td class="py-4">Smart Ишим</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">3 850 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50"></p>
+                            </td>
+                            <td class="py-4"></td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#EE5B5B] bg-[#FFD8D8]" type="button" value="Отклонено">
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">Вывод</td>
+                            <td class="py-4">00:00 31.12.2018</td>
+                            <td class="py-4">-</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">-16 335 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50"></p>
+                            </td>
+                            <td class="py-4"></td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#5E77F9] bg-[#DFE4FE]" type="button" value="Вывод средства">
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">№32467</td>
+                            <td class="py-4">11:20 29.12.2018</td>
+                            <td class="py-4">Smart Лазурный</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">1 000 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50"></p>
+                            </td>
+                            <td class="py-4"></td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#EE5B5B] bg-[#FFD8D8]" type="button" value="Отклонено">
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">№32467</td>
+                            <td class="py-4">11:20 29.12.2018</td>
+                            <td class="py-4">Smart Лазурный</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">1 500 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50">-150 тг</p>
+                            </td>
+                            <td class="py-4">1 350 тг</td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#5BC044] bg-[#D7EBD3]" type="button" value="Оплачено">
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">Комиссия</td>
+                            <td class="py-4">11:20 29.12.2018</td>
+                            <td class="py-4">-</td>
+                            <td class="text-right">
+                                <p class="w-[50%] text-[#EE5B5B]">-168 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50"></p>
+                            </td>
+                            <td class="py-4"></td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#EE5B5B] bg-[#FFD8D8]" type="button" value="Комиссия">
+                            </td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">№32467</td>
+                            <td class="py-4">11:20 29.12.2018</td>
+                            <td class="py-4">Smart Лазурный</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">1 500 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50">-150 тг</p>
+                            </td>
+                            <td class="py-4">1 350 тг</td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#5BC044] bg-[#D7EBD3]" type="button" value="Оплачено">
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="py-4"><input type="checkbox"></td>
+                            <td class="py-4">№32467</td>
+                            <td class="py-4">11:20 29.12.2018</td>
+                            <td class="py-4">Smart Ишим</td>
+                            <td class="text-right">
+                                <p class="w-[50%]">9 980 тг</p>
+                                <p class="w-[50%] text-[11px] opacity-50">-998 тг</p>
+                            </td>
+                            <td class="py-4">8 982 тг</td>
+                            <td class="py-4">
+                                <input class="text-xs inline-block text-center rounded-full px-2.5 py-1 text-[#5BC044] bg-[#D7EBD3]" type="button" value="Оплачено">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
